@@ -1,6 +1,2 @@
-sd "/usr/lib64/libz3.so" "/usr/lib64/libz3.a" -r "*.txt"
-sd "/usr/lib64/libz3.so" "/usr/lib64/libz3.a" -r "*Makefile*"
-sd "\-lz3.so" "/usr/lib64/libz3.a" -r "*.txt"
-sd "\-lz3.so" "/usr/lib64/libz3.a" -r "*Makefile*"
-#sd "/usr/lib64/libz.so" "/usr/lib64/libz.a" -r "*.ninja"
-#sd "/usr/lib64/libxml2.so" "/usr/lib64/libxml2.a /usr/lib64/liblzma.a /usr/lib64/libz.a" -r "*.ninja"
+sd "/usr/lib64/libz.so" "/usr/lib64/libz.a" $(fd -uu --glob *.ninja)
+sd "/usr/lib64/libxml2.so" "/usr/lib64/libxml2.a /usr/lib64/liblzma.a /usr/lib64/libz.a" $(fd -uu --glob *.ninja)
