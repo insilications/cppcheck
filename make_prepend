@@ -1,2 +1,4 @@
-sd "/usr/lib64/libz.so" "/usr/lib64/libz.a" $(fd -uu --glob *.ninja)
-sd "/usr/lib64/libxml2.so" "/usr/lib64/libxml2.a /usr/lib64/liblzma.a /usr/lib64/libz.a" $(fd -uu --glob *.ninja)
+sd "/usr/lib64/libz.so" "/usr/lib64/libz.a" $(fd -uu --follow .*link.txt$)
+sd "/usr/lib64/liblzma.so" "/usr/lib64/liblzma.a" $(fd -uu --follow .*link.txt$)
+sd "/usr/lib64/liblz4.so" "/usr/lib64/liblz4.a" $(fd -uu --follow .*link.txt$)
+sd "/usr/lib64/libxml2.so" "/usr/lib64/libxml2.a /usr/lib64/liblzma.a /usr/lib64/libz.a" $(fd -uu --follow .*link.txt$)
